@@ -37,8 +37,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                \App\Filament\Widgets\MonthlySalesSummaryWidget::class,
+                \App\Filament\Widgets\SalesLastSevenDaysWidget::class,
+                \App\Filament\Widgets\TopProductsWidget::class,
+                \App\Filament\Widgets\MonthlySalesWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
